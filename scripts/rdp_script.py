@@ -52,6 +52,7 @@ def main():
     remote_id = pyperclip.paste()  # Use pyperclip to get clipboard contents
 
     print("RustDesk Remote ID:", remote_id)
+    #sudoko
       # ... (rest of the code)
 
 if __name__ == "__main__":
