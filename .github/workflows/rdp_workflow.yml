@@ -1,0 +1,29 @@
+name: Create RDP Session with PyAutoGUI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rdp:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+        
+- name: Install Dependencies
+  run: |
+    pip install pyautogui
+    pip install pypiwin32
+    pip install pyperclip
+
+    - name: Run PyAutoGUI Script
+      run: |
+        python .github/scripts/rdp_script.py
